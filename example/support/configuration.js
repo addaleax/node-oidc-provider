@@ -1,11 +1,12 @@
 export default {
   clients: [
-    // {
-    //   client_id: 'oidcCLIENT',
-    //   client_secret: '...',
-    //   grant_types: ['refresh_token', 'authorization_code'],
-    //   redirect_uris: ['http://sso-client.dev/providers/7/open_id', 'http://sso-client.dev/providers/8/open_id'],
-    // }
+    {
+      client_id: 'zELcpfANLqY7Oqas',
+      client_secret: 'TQV5U29k1gHibH5bx1layBo0OSAvAbRT3UYW3EWrSYBB5swxjVfWUa1BS8lqzxG/0v9wruMcrGadany3',
+      grant_types: ['refresh_token', 'authorization_code'],
+      redirect_uris: ['http://127.0.0.1/cb'],
+      application_type: 'native',
+    },
   ],
   interactions: {
     url(ctx, interaction) { // eslint-disable-line no-unused-vars
@@ -26,7 +27,19 @@ export default {
     devInteractions: { enabled: false }, // defaults to true
 
     deviceFlow: { enabled: true }, // defaults to false
-    revocation: { enabled: true }, // defaults to false
+    revocation: { enabled: true }, // defaults to false,
+
+    resourceIndicators: {
+      getResourceServerInfo: () => ({
+        scope: 'api:read api:write',
+        audience: 'resource-server-audience-value',
+        accessTokenTTL: 2 * 60 * 60, // 2 hours
+        accessTokenFormat: 'jwt',
+        jwt: {
+          sign: { alg: 'ES256' },
+        },
+      }),
+    },
   },
   jwks: {
     keys: [

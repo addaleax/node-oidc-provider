@@ -46,9 +46,6 @@
   "author": "Filip Skokan <panva.ip@gmail.com>",
   "type": "module",
   "main": "lib/index.js",
-  "files": [
-    "lib"
-  ],
   "scripts": {
     "ci": "node ./test/ci",
     "heroku-postbuild": "npm install mongodb@^4.3.0 openid-client@^5.0.0",
@@ -68,9 +65,7 @@
     "object-hash": "^3.0.0",
     "oidc-token-hash": "^5.0.1",
     "quick-lru": "^6.1.1",
-    "raw-body": "^2.5.1"
-  },
-  "devDependencies": {
+    "raw-body": "^2.5.1",
     "@fastify/middie": "^8.0.0",
     "@hapi/hapi": "^21.0.0",
     "@koa/ejs": "^5.0.0",
