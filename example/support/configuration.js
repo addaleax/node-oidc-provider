@@ -3,7 +3,7 @@ export default {
     {
       client_id: 'zELcpfANLqY7Oqas',
       client_secret: 'TQV5U29k1gHibH5bx1layBo0OSAvAbRT3UYW3EWrSYBB5swxjVfWUa1BS8lqzxG/0v9wruMcrGadany3',
-      grant_types: ['refresh_token', 'authorization_code'],
+      grant_types: ['refresh_token', 'authorization_code', 'urn:ietf:params:oauth:grant-type:device_code'],
       redirect_uris: ['http://127.0.0.1/cb'],
       application_type: 'native',
     },
